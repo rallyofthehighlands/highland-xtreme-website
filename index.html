@@ -1,144 +1,192 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Highland Xtreme Motorsports Club</title>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Roboto,Arial;background:#0a0a0a;color:#fff;line-height:1.6}
-header{display:flex;justify-content:space-between;align-items:center;padding:20px 60px;background:#0f0f0f;position:sticky;top:0;z-index:10}
-.logo{font-family:Orbitron;font-size:22px;color:#ff3b3b}
-nav a{color:#fff;text-decoration:none;margin-left:25px;font-weight:500}
-nav a:hover{color:#ff3b3b}
-.hero{height:92vh;background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.85)),url('hero.jpg');background-size:cover;background-position:center;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px}
-.hero h1{font-family:Orbitron;font-size:64px;letter-spacing:2px}
-.hero p{margin-top:15px;font-size:20px;color:#ccc}
-.btn{margin-top:25px;padding:14px 32px;background:#ff3b3b;border:none;color:#fff;font-size:16px;cursor:pointer;border-radius:5px}
-.btn:hover{background:#ff1f1f}
-.section{padding:90px 10%}
-.section h2{text-align:center;font-family:Orbitron;margin-bottom:40px}
-.about{max-width:900px;margin:auto;text-align:center;color:#bbb;font-size:18px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px}
-.card{background:#141414;padding:30px;border-radius:10px;transition:.3s}
-.card:hover{transform:translateY(-6px);background:#1c1c1c}
-.card h3{font-family:Orbitron;margin-bottom:10px;color:#ff3b3b}
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-.gallery img{width:100%;height:220px;object-fit:cover;border-radius:8px;transition:.3s}
-.gallery img:hover{transform:scale(1.05)}
-.drivers{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px}
-.driver{background:#141414;border-radius:10px;padding:20px;text-align:center}
-.driver img{width:100%;height:220px;object-fit:cover;border-radius:6px}
-.driver h4{margin-top:10px;font-family:Orbitron}
-.sponsors{display:flex;flex-wrap:wrap;justify-content:center;gap:40px;align-items:center}
-.sponsors img{height:60px;opacity:.8}
-.contact{text-align:center;color:#bbb}
-footer{background:#0f0f0f;text-align:center;padding:35px;margin-top:60px;color:#888}
-@media(max-width:768px){
-.hero h1{font-size:40px}
-header{padding:20px}
-}
-</style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Highland Xtreme Motorsports Club</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;800;900&family=Racing+Sans+One&display=swap"
+      rel="stylesheet"
+    />
 
-<header>
-<div class="logo">
-<img src="logo.png" alt="Highland Xtreme Logo">
-</div>
-<nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#events">Events</a>
-<a href="#gallery">Gallery</a>
-<a href="#drivers">Drivers</a>
-<a href="#contact">Contact</a>
-</nav>
-</header>
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="logo.png" alt="Highland Xtreme Logo" />
+      </div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#events">Events</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#drivers">Drivers</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
-<section id="home" class="hero">
-<h1>Highland Xtreme Motorsports</h1>
-<p>Rally | Adventure | Motorsport Community</p>
-<button class="btn">Join The Club</button>
+    <section id="home" class="hero">
+      <video autoplay muted loop playsinline class="hero-video">
+        <source src="hero-video.mp4" type="video/mp4" />
+      </video>
+
+      <div class="hero-content">
+        <h1>Highland Xtreme Motorsports Club</h1>
+        <p>Rally | Adventure | Motorsport Community</p>
+        <button class="btn" onclick="openForm()">Join The Club</button>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About The Club</h2>
+      <p class="about">
+        Highland Xtreme Motorsports Club is a passionate motorsports community
+        bringing together rally drivers, automotive enthusiasts and adventure
+        seekers. The club organizes rally championships, motorsport training
+        programs, automotive events and motorsport volunteering opportunities
+        across India.
+      </p>
+    </section>
+
+    <section id="events" class="section">
+      <h2>Upcoming Events</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>INRC - Rally of The Highlands Round - 2 (2026)</h3>
+          <p>
+            Round 2 of the Indian National Rally Championship (INRC) 2026 will
+            be held on 22 May 2026, bringing together some of the finest rally
+            drivers from across the country. The event promises intense
+            competition, thrilling stages, and an electrifying atmosphere for
+            motorsport enthusiasts. Organized under the regulations of FMSCI,
+            the rally will showcase speed, precision, and the true spirit of
+            Indian rallying.
+          </p>
+        </div>
+        <div class="card">
+          <h3>highlandxtreme TSD Rally</h3>
+          <p>
+            Hands‑on rally training covering driving techniques, navigation and
+            safety.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section">
+      <h2>Rally Gallery</h2>
+      <div class="gallery">
+        <img src="DSC_7492.JPG" loading="lazy" onclick="openImage(this.src)" />
+        <img src="22.jpg" loading="lazy" onclick="openImage(this.src)" />
+        <img src="12.jpg" loading="lazy" onclick="openImage(this.src)" />
+        <img src="65.jpg" loading="lazy" onclick="openImage(this.src)" />
+        <img src="29.jpg" loading="lazy" onclick="openImage(this.src)" />
+        <img src="DSC_7509.JPG" loading="lazy" onclick="openImage(this.src)" />
+        <img src="DSC_7404.JPG" loading="lazy" onclick="openImage(this.src)" />
+        <img src="DSC_7411.JPG" loading="lazy" onclick="openImage(this.src)" />
+      </div>
+    </section>
+
+    <div id="imagePopup" class="popup" onclick="closeImage()">
+      <span class="close">&times;</span>
+      <img class="popup-content" id="popupImg" />
+    </div>
+
+    <section id="drivers" class="section">
+      <h2>Featured Drivers</h2>
+      <div class="drivers">
+        <div class="driver">
+          <img src="Driver2.jpeg" />
+          <h4>Pushpendra Kumrawat</h4>
+          <p>Rally Driver</p>
+        </div>
+        <div class="driver">
+          <img src="IMG_0159.jpg" />
+          <h4>Kripansh Kumrawat</h4>
+          <p>Navigator</p>
+        </div>
+        <div class="driver">
+          <img src="IMG_0143.jpg" />
+          <h4>Kripansh Kumrawat</h4>
+          <p>Team Member</p>
+        </div>
+      </div>
+    </section>
+
+ <section class="section">
+  <h2>Our Sponsors</h2>
+
+  <div class="sponsor-slider">
+    <div class="sponsor-track">
+
+      <img src="mptlogo.png" />
+      <img src="logo.png" />
+      <img src="sponsor2.png" />
+      <img src="natrax1.png" />
+      <img src="inrc.png" />
+
+      <!-- duplicate for smooth infinite animation -->
+      <img src="eagle.png" />
+      <img src="MBM (1).png" />
+      <img src="MRF.jpg" />
+      <img src="FMSCI_Logo_new.jpg" />
+
+
+    </div>
+  </div>
+
 </section>
 
-<section id="about" class="section">
-<h2>About The Club</h2>
-<p class="about">Highland Xtreme Motorsports Club is a passionate motorsports community bringing together rally drivers, automotive enthusiasts and adventure seekers. The club organizes rally championships, motorsport training programs, automotive events and motorsport volunteering opportunities across India.</p>
-</section>
+    <section id="contact" class="section contact">
+      <h2>Contact Us</h2>
+      <p>Email: rallyofthehighlands@gmail.com</p>
+      <p>Instagram: @madhyabharatmotorsports</p>
+      <p>Whatsapp/Contact No: +91 8817538024</p>
+      <p>
+        Location: 388, Sudama Nagar Near Ram Vatika <br />Indore (M.P), Pin
+        452001 India
+      </p>
+    </section>
 
-<section id="events" class="section">
-<h2>Upcoming Events</h2>
-<div class="cards">
-<div class="card">
-<h3>Rally of The Highlands</h3>
-<p>Flagship rally event featuring professional drivers competing on challenging terrains.</p>
-</div>
-<div class="card">
-<h3>Motorsport Training Camp</h3>
-<p>Hands‑on rally training covering driving techniques, navigation and safety.</p>
-</div>
-<div class="card">
-<h3>Track Day Experience</h3>
-<p>Performance driving experience for enthusiasts on closed racing circuits.</p>
-</div>
-</div>
-</section>
+    <footer>
+      <p>© 2026 Highland Xtreme Motorsports Club</p>
+    </footer>
+    <div id="formPopup" class="form-popup">
+      <div class="form-container">
+        <span class="close-form" onclick="closeForm()">&times;</span>
 
-<section id="gallery" class="section">
-<h2>Rally Gallery</h2>
-<div class="gallery">
-<img src="car1.jpg">
-<img src="car2.jpg">
-<img src="car3.jpg">
-<img src="car4.jpg">
-<img src="car5.jpg">
-<img src="car6.jpg">
-</div>
-</section>
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSeC24dwelhMhS4w_-fBZ1G4Bpwphh5SpuZTeyEVH4R5mOKkIw/viewform?usp=dialog"
+          width="100%"
+          height="700"
+          frameborder="0"
+        >
+        </iframe>
+      </div>
+    </div>
+    <script>
+      function openImage(src) {
+        const popup = document.getElementById("imagePopup");
+        const img = document.getElementById("popupImg");
 
-<section id="drivers" class="section">
-<h2>Featured Drivers</h2>
-<div class="drivers">
-<div class="driver">
-<img src="driver1.jpg">
-<h4>Driver Name</h4>
-<p>Rally Driver</p>
-</div>
-<div class="driver">
-<img src="driver2.jpg">
-<h4>Driver Name</h4>
-<p>Navigator</p>
-</div>
-<div class="driver">
-<img src="driver3.jpg">
-<h4>Driver Name</h4>
-<p>Team Member</p>
-</div>
-</div>
-</section>
+        img.src = src;
+        popup.classList.add("show");
+      }
 
-<section class="section">
-<h2>Sponsors</h2>
-<div class="sponsors">
-<img src="sponsor1.png">
-<img src="sponsor2.png">
-<img src="sponsor3.png">
-<img src="sponsor4.png">
-</div>
-</section>
+      function closeImage() {
+        const popup = document.getElementById("imagePopup");
+        popup.classList.remove("show");
+      }
 
-<section id="contact" class="section contact">
-<h2>Contact Us</h2>
-<p>Email: info@highlandxtreme.com</p>
-<p>Instagram: @highlandxtreme</p>
-<p>Location: India</p>
-</section>
+      function openForm() {
+        document.getElementById("formPopup").style.display = "flex";
+      }
 
-<footer>
-<p>© 2026 Highland Xtreme Motorsports Club</p>
-</footer>
-
-</body>
+      function closeForm() {
+        document.getElementById("formPopup").style.display = "none";
+      }
+    </script>
+  </body>
 </html>
